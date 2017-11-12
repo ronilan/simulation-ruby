@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html >
+<head>
+  <meta charset="UTF-8">
+  <title>A Simple Traffic Simulator</title>
+  
+  
+  
+      <link rel="stylesheet" href="css/style.css">
+
+  
+</head>
+
+<body>
+<h1>A Simple Traffic Simulator</h1>
+<div class="text">There are four types of cars on the road: trucks (gray), sedans (navy blue), SUVs (light blue) and sports (red). They follow simple rules as to when to speed up, slow down or break hard. They differ in their passenger capacity and maximum speed. Each
+  car has a driver and a random number of passengers up to capacity. Those are marked as little squares. Each car displays its current speed in a bubble behind it. When it hits the breaks the bubble turns red. Before a car enters the road its plate, serial number and the identity of its driver and passengers are revealed.</div>
+
+<div id="top" class="road"></div>
+<div id="bottom" class="road"></div>
+
+<div id="top-car-info" class="car-info top"></div>
+<div id="bottom-car-info" class="car-info bottom"></div>
+
+<div class="text-tech">This is an example of Object Oriented Programing with Ruby. The driver and passengers are objects, instances of the Person class. Each car on the road is an object, an instance of a subclass, either Truck, Sport, Sedan or SUV that inherits from the Car class. A simulation object, instance of the Sim class, controls the cars on each road. The simulation is set as a Sinatra app running on Heroku. The Simulation is stepped forward with http requests. These requests, to a <a href="https://traffic-simulation.herokuapp.com/top">top</a> and <a href="https://traffic-simulation.herokuapp.com/bottom">bottom</a> routes return a JSON. The JSON represents the state of the simulated objects at that point in time. An HTML/CSS/JavaScript UI renders and refreshes the cars and info for each road.</div>
+<div class="text credit">Made by <a href="http://www.ronilan.com">Ron Ilan</a> (2017)</div>
+
+<div id="truck" class="car">
+  <div class="speed">0</div>
+  <div class="wheel lf"></div>
+  <div class="wheel rf"></div>
+  <div class="wheel lb"></div>
+  <div class="wheel rb"></div>
+  <div class="car-body truck">
+    <div class="glass truck">
+      <div class="driver"></div>
+      <div class="seat"></div>
+      <div class="seat"></div>
+    </div>
+    <div class="flatbed"></div>
+  </div>
+</div>
+</div>
+
+<div id="sport" class="car">
+  <div class="speed">0</div>
+  <div class="wheel lf"></div>
+  <div class="wheel rf"></div>
+  <div class="wheel lb"></div>
+  <div class="wheel rb"></div>
+  <div class="car-body sport">
+    <div class="glass f">
+      <div class="driver"></div>
+      <div class="seat"></div>
+      <div class="seat"></div>
+    </div>
+  </div>
+</div>
+
+<div id="sedan" class="car">
+  <div class="speed">0</div>
+  <div class="wheel lf"></div>
+  <div class="wheel rf"></div>
+  <div class="wheel lb"></div>
+  <div class="wheel rb"></div>
+  <div class="car-body sedan">
+    <div class="glass f">
+      <div class="driver"></div>
+      <div class="floor"></div>
+      <div class="seat"></div>
+    </div>
+    <div class="glass m">
+      <div class="seat"></div>
+      <div class="seat"></div>
+      <div class="seat"></div>
+    </div>
+  </div>
+</div>
+
+<div id="suv" class="car">
+  <div class="speed slower">0</div>
+  <div class="wheel lf"></div>
+  <div class="wheel rf"></div>
+  <div class="wheel lb"></div>
+  <div class="wheel rb"></div>
+  <div class="car-body suv">
+
+    <div class="glass f">
+      <div class="driver"></div>
+      <div class="floor"></div>
+      <div class="seat"></div>
+    </div>
+    <div class="glass m">
+      <div class="seat"></div>
+      <div class="seat"></div>
+      <div class="seat"></div>
+    </div>
+    <div class="glass b">
+      <div class="seat"></div>
+      <div class="floor"></div>
+      <div class="seat"></div>
+    </div>
+  </div>
+</div>
+  
+    <script  src="js/index.js"></script>
+
+</body>
+</html>

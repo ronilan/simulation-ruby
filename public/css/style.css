@@ -1,0 +1,261 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background: #222;
+  margin: 0;
+  padding: 0;
+  color: #ddd;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 50px;
+  text-shadow: 2px 1px #000;
+}
+
+a {
+  color: #ddd;
+}
+
+.text {
+  line-height: 1.5em;
+  text-align: center;
+  width: 60%;
+  margin: 50px auto;
+  clear: both;
+}
+
+.text-tech {
+  font-family: "Courier New", Courier, monospace;
+  text-align: center;
+  width: 60%;
+  margin: 50px auto;
+  clear: both;
+}
+
+.credit {
+  font-size: 10px;
+}
+
+.road {
+  width: 100%;
+  height: 70px;
+  background: #666;
+  overflow: hidden;
+  position: relative;
+  margin: auto;
+}
+
+#bottom {
+  border-bottom: 2px solid yellow;
+  border-top: 2px dashed #eee;
+}
+
+#top {
+  border-top: 2px solid yellow;
+}
+
+/* */
+.flip {
+  transform: scaleX(-1);
+}
+
+.car {
+  margin-top: 20px;
+  width: 60px;
+  height: 30px;
+  position: absolute;
+  text-align: center;
+}
+
+.speed {
+  position: absolute;
+  z-index: 500;
+  font-size: 10px;
+  line-height: 20px;
+  width: 20px;
+  left: -25px;
+  padding: 0px;
+  margin: 5px 0;
+  border-radius: 15px;
+}
+
+.speed.slower {
+  background: #f33;
+}
+
+.speed.faster {
+  border: 1px solid #ddd;
+}
+
+.car-body {
+  width: 60px;
+  height: 30px;
+  position: absolute;
+  text-align: center;
+}
+
+.wheel {
+  background: black;
+  width: 10px;
+  height: 6px;
+  position: absolute;
+  border-radius: 2px;
+}
+
+.driver {
+  width: 5px;
+  height: 4px;
+  margin: 2px;
+  background: #000;
+}
+
+.passenger {
+  width: 5px;
+  height: 4px;
+  margin: 2px;
+  background: #666;
+}
+
+.seat {
+  width: 3px;
+  height: 2px;
+  margin: 2px;
+  border: 1px solid #666;
+}
+
+.floor {
+  width: 3px;
+  height: 2px;
+  margin: 2px;
+  border: 1px solid transparent;
+}
+
+.sedan {
+  font-size: 9px;
+  line-height: 15px;
+  border-radius: 6px 8px 8px 6px;
+  background: blue;
+}
+
+.suv {
+  font-size: 9px;
+  line-height: 15px;
+  border-radius: 2px 8px 8px 2px;
+  background: navy;
+}
+
+.truck {
+  font-size: 9px;
+  line-height: 15px;
+  border-radius: 4px 4px 2px 4px;
+  background: #888;
+}
+
+.sport {
+  font-size: 9px;
+  line-height: 15px;
+  border-radius: 4px 8px 8px 4px;
+  background: FireBrick;
+}
+
+.wheel.lf {
+  top: -3px;
+  left: 42px;
+}
+.wheel.rf {
+  top: 27px;
+  left: 42px;
+}
+
+.wheel.lb {
+  top: -3px;
+  left: 4px;
+}
+.wheel.rb {
+  top: 27px;
+  left: 4px;
+}
+
+.glass {
+  background: lightblue;
+  position: absolute;
+}
+
+.glass.f {
+  border-radius: 2px;
+  width: 15px;
+  height: 20px;
+  top: 5px;
+  left: 27px;
+}
+
+.glass.m {
+  border-radius: 2px;
+  width: 10px;
+  height: 20px;
+  top: 5px;
+  left: 16px;
+}
+
+.glass.b {
+  border-radius: 2px;
+  top: 5px;
+  left: 5px;
+  width: 10px;
+  height: 20px;
+}
+
+.glass.truck {
+  border-radius: 2px;
+  width: 12px;
+  height: 20px;
+  top: 5px;
+  left: 37px;
+}
+
+.flatbed {
+  width: 30px;
+  height: 20px;
+  top: 5px;
+  left: 3px;
+  background: #444;
+  position: absolute;
+}
+
+#truck,
+#sport,
+#suv,
+#sedan {
+  left: -100px;
+}
+
+.car-info {
+  font-size: 12px;
+  height: 0px;
+  padding: 10px;
+  line-height: 14px;
+  width: 130px;
+}
+
+.car-info .passenger-list {
+  font-size: 10px;
+  padding-left: 5px;
+}
+
+.car-info.bottom {
+  float: right;
+}
+
+.car-info::before {
+  width: 2px;
+  margin: -10px auto 5px auto;
+  background: #ddd;
+  height: 10px;
+  display: block;
+  content: " ";
+  z-index: 100;
+  margin-top: ;
+}
+.car-info.top {
+  float: left;
+}
